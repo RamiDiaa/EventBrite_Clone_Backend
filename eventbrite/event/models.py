@@ -99,3 +99,14 @@ class Discount(models.Model):
 #   user_id=models.IntegerField()
 #   sub_category_id=models.IntegerField()
 
+class Tickets(models.Model):
+    Tickets_id = models.IntegerField()
+    name = models.CharField(max_length=200)
+    price = models.DecimalField(max_digits=8, decimal_places=2)
+    event_id = models.CharField(max_length=200)
+    user_id = models.CharField(max_length=200)
+    tickets_num = models.IntegerField()
+    tickets_type = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
